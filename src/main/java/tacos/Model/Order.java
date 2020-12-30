@@ -1,4 +1,7 @@
-package tacos;
+package tacos.Model;
+
+import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
@@ -11,6 +14,10 @@ import lombok.Data;
 @Data
 public class Order {
 
+	private Long id;
+    
+	private Date placedAt;
+	
     @NotBlank(message="Name is required")
 	private String name;
     
@@ -34,4 +41,11 @@ public class Order {
 	
     @Digits(integer=3, fraction=0, message="Invalid CVV")
     private String ccCVV;
+
+    private List<Taco> tacos;
+    
+    
+	public void addDesign(Taco saved) {
+		this.tacos.add(saved);
+	}
 }
