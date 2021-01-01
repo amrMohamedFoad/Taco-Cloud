@@ -3,6 +3,7 @@ package tacos.Model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,7 +25,7 @@ public class Taco {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	private Date createdAt;
+	private Date created_At;
 
 	@NotNull
 	@Size(min = 5, message = "Name must be at least 5 characters long")
@@ -36,6 +37,6 @@ public class Taco {
 
 	@PrePersist
 	void createdAt() {
-		this.createdAt = new Date();
+		this.created_At = new Date();
 	}
 }

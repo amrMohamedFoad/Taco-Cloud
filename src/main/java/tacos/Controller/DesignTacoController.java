@@ -2,6 +2,7 @@ package tacos.Controller;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -61,7 +62,6 @@ public class DesignTacoController {
 			model.addAttribute(type.toString().toLowerCase(), filterByType(ingredients, type));
 		}
 
-		//model.addAttribute("design", new Taco());
 		return "design";
 	}
 
