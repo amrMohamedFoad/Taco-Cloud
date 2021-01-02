@@ -1,4 +1,4 @@
-package tacos;
+package tacos.Repos;
 
 import org.springframework.data.repository.CrudRepository;
 

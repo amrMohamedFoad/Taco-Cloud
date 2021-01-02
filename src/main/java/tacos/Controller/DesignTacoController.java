@@ -19,12 +19,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import lombok.extern.slf4j.Slf4j;
-import tacos.IngredientRepository;
-import tacos.TacoRepository;
 import tacos.Model.Ingredient;
 //import tacos.Taco;
 import tacos.Model.Taco;
 import tacos.Model.Ingredient.Type;
+import tacos.Repos.IngredientRepository;
+import tacos.Repos.TacoRepository;
 import tacos.Model.Order;
 
 @Slf4j
