@@ -69,5 +69,9 @@ xmlns:th="http://www.thymeleaf.org"> <head>
       <input type="submit" value="Submit order"/>
       
     </form>
+    <br /> <br />
+	<form method="POST" th:action="@{/logout}">
+         <input type="submit" value="Logout"/>
+    </form>
 </body>
 </html>
